@@ -1,0 +1,250 @@
+/* Reset some default styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+  padding-top: 60px; /* Ensure content does not overlap the navbar */
+}
+#card-3, #card-1 {
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed; /* Fixes the navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  /* background-color: var(--navbar-bg);
+  color: var(--navbar-color); */
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 1000; /* Ensures navbar stays above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevents overflow issues */
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+
+.logo {
+  height: 40px;
+  margin-right: 15px; /* Add margin for spacing */
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: var(--navbar-color);
+
+}
+
+/* Media Queries for Responsiveness */
+
+/* For devices with a max width of 992px (small laptops and tablets) */
+@media (max-width: 992px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    height: 30px;
+    margin-bottom: 10px; /* Space below logo */
+  }
+
+  .navbar-brand {
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Space below brand name */
+  }
+
+  .theme-toggle {
+    font-size: 1em;
+  }
+}
+
+/* For devices with a max width of 768px (tablets and mobile phones) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    height: 25px;
+    margin-bottom: 10px; /* Space below logo */
+  }
+
+  .navbar-brand {
+    font-size: 1.1em;
+    margin-bottom: 10px; /* Space below brand name */
+  }
+
+  .theme-toggle {
+    font-size: 1em;
+  }
+}
+
+/* For devices with a max width of 480px (smaller mobile phones) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .logo {
+    height: 20px;
+    margin-bottom: 5px; /* Space below logo */
+  }
+
+  .navbar-brand {
+    font-size: 1em;
+    margin-bottom: 5px; /* Space below brand name */
+  }
+
+  .theme-toggle {
+    font-size: 0.9em;
+  }
+}
+
+/* BannerCard styles */
+.banner-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* margin: 20px 0; */
+  position: relative;
+  z-index: 1;
+}
+
+.banner-image {
+  /* margin-top: 30px; */
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.banner-content {
+  text-align: center;
+}
+
+/* .banner-title {
+  font-size: 2em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.banner-description {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+} */
+
+/* Default dark theme */
+body.dark-mode {
+  --navbar-bg: #333;
+  --navbar-color: #fff;
+  background-color: #121212;
+}
+
+/* Light theme */
+body.light-mode {
+  --navbar-bg: #fff;
+  --navbar-color: #333;
+  background-color: #f0f0f0;
+}
+
+/* Media Queries for BannerCard Responsiveness */
+
+/* For devices with a max width of 992px (small laptops and tablets) */
+@media (max-width: 992px) {
+  .banner-card {
+    padding: 15px;
+  }
+
+  .banner-title {
+    font-size: 1.5em;
+  }
+
+  .banner-description {
+    font-size: 1.1em;
+  }
+}
+
+/* For devices with a max width of 768px (tablets and mobile phones) */
+@media (max-width: 768px) {
+  .banner-card {
+    padding: 15px;
+  }
+
+  .banner-title {
+    font-size: 1.4em;
+  }
+
+  .banner-description {
+    font-size: 1em;
+  }
+}
+
+/* For devices with a max width of 480px (smaller mobile phones) */
+@media (max-width: 480px) {
+  .banner-card {
+    padding: 10px;
+  }
+
+  .banner-title {
+    font-size: 1.2em;
+  }
+
+  .banner-description {
+    font-size: 0.9em;
+  }
+}

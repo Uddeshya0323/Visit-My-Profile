@@ -1,0 +1,129 @@
+.project-card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width by default */
+    max-width: 300px; /* Maximum width */
+    margin: 10px; /* Spacing between cards */
+    box-sizing: border-box;
+}
+
+.project-card-logo {
+    width: 100%;
+    height: 100%; /* Adjusted for responsiveness */
+    overflow: hidden;
+}
+
+.project-card-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.project-card-button {
+    background-color: rgb(38, 94, 38);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em; /* Adjusted for smaller screens */
+}
+
+.project-card-button svg {
+    margin-right: 8px;
+}
+
+.project-card-title {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.project-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.project-card-footer-left {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Margin for wrapping */
+}
+
+.project-card-github {
+    color: black;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.project-card-timer {
+    display: flex;
+    align-items: center;
+}
+
+.project-card-days {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.project-card-text {
+    font-size: 0.9em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .project-card {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .project-card-button {
+        font-size: 0.8em; /* Smaller button text */
+    }
+
+    .project-card-title {
+        font-size: 1em; /* Smaller title text */
+    }
+
+    .project-card-footer-left,
+    .project-card-timer {
+        font-size: 0.8em; /* Smaller text for footer */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        max-width: 100%; /* Full width on very small screens */
+        margin: 5px; /* Reduced margin */
+    }
+
+    .project-card-button {
+        font-size: 0.7em; /* Even smaller button text */
+    }
+
+    .project-card-title {
+        font-size: 0.9em; /* Even smaller title text */
+    }
+
+    .project-card-footer-left,
+    .project-card-timer {
+        font-size: 0.7em; /* Even smaller footer text */
+    }
+}

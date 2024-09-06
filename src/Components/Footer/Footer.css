@@ -1,0 +1,96 @@
+/* Reset some default styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    margin-bottom: 15px;
+  }
+  
+  .footer-logo-img {
+    height: 50px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: #f39c12; /* Example hover color */
+  }
+  
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-social-link {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-social-link:hover {
+    color: #f39c12; /* Example hover color */
+  }
+  
+  .footer-bottom {
+    font-size: 0.9em;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For devices with a max width of 768px (tablets and mobile phones) */
+  @media (max-width: 768px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .footer-socials {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .footer-logo-img {
+      height: 40px;
+    }
+  }
+  
+  /* For devices with a max width of 480px (smaller mobile phones) */
+  @media (max-width: 480px) {
+    .footer-links {
+      font-size: 0.9em;
+    }
+  
+    .footer-social-link {
+      font-size: 1.2em;
+    }
+  
+    .footer-logo-img {
+      height: 30px;
+    }
+  }
+  
